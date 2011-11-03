@@ -1,3 +1,9 @@
+# revision 24223
+# category Package
+# catalog-ctan /macros/latex/contrib/fontaxes
+# catalog-date 2011-10-06 16:06:09 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0a
 Name:		texlive-fontaxes
 Version:	1.0a
 Release:	1
@@ -47,6 +53,7 @@ many professional fonts.
 #- source
 %doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.dtx
 %doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ many professional fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
