@@ -1,11 +1,11 @@
-# revision 24223
+# revision 24606
 # category Package
 # catalog-ctan /macros/latex/contrib/fontaxes
-# catalog-date 2011-10-06 16:06:09 +0200
+# catalog-date 2011-11-15 07:10:45 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0a
+# catalog-version 1.0b
 Name:		texlive-fontaxes
-Version:	1.0a
+Version:	1.0b
 Release:	1
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
