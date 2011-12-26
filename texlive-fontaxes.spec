@@ -1,11 +1,11 @@
-# revision 24606
+# revision 24880
 # category Package
 # catalog-ctan /macros/latex/contrib/fontaxes
-# catalog-date 2011-11-15 07:10:45 +0100
+# catalog-date 2011-12-19 11:01:35 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0b
+# catalog-version 1.0c
 Name:		texlive-fontaxes
-Version:	1.0b
+Version:	1.0c
 Release:	1
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package adds several new font axes on top of LaTeX's New
@@ -30,19 +27,19 @@ new axes to deal with the different figure versions offered by
 many professional fonts.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
