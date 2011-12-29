@@ -26,16 +26,8 @@ into a primary and a secondary shape axis, and it adds three
 new axes to deal with the different figure versions offered by
 many professional fonts.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -51,7 +43,6 @@ many professional fonts.
 #- source
 %doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.dtx
 %doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,5 +53,3 @@ many professional fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
