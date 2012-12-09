@@ -53,3 +53,25 @@ many professional fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-2
++ Revision: 752008
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-1
++ Revision: 745211
+- texlive-fontaxes
+
+* Tue Nov 22 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0b-1
++ Revision: 732517
+- texlive-fontaxes
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
++ Revision: 718478
+- texlive-fontaxes
+- texlive-fontaxes
+- texlive-fontaxes
+- texlive-fontaxes
+
