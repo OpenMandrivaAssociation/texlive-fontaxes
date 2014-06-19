@@ -1,12 +1,12 @@
-# revision 24880
+# revision 33276
 # category Package
 # catalog-ctan /macros/latex/contrib/fontaxes
-# catalog-date 2011-12-19 11:01:35 +0100
+# catalog-date 2014-03-23 16:44:03 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0c
+# catalog-version 1.0d
 Name:		texlive-fontaxes
-Version:	1.0c
-Release:	7
+Version:	1.0d
+Release:	1
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
@@ -53,25 +53,3 @@ many professional fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-2
-+ Revision: 752008
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-1
-+ Revision: 745211
-- texlive-fontaxes
-
-* Tue Nov 22 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0b-1
-+ Revision: 732517
-- texlive-fontaxes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
-+ Revision: 718478
-- texlive-fontaxes
-- texlive-fontaxes
-- texlive-fontaxes
-- texlive-fontaxes
-
