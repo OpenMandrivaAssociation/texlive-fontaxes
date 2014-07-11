@@ -6,7 +6,7 @@
 # catalog-version 1.0d
 Name:		texlive-fontaxes
 Version:	1.0d
-Release:	1
+Release:	2
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
