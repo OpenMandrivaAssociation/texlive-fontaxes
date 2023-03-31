@@ -1,6 +1,6 @@
 Name:		texlive-fontaxes
 Version:	55920
-Release:	1
+Release:	2
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
