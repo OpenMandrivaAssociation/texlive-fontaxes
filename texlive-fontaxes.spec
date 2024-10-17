@@ -3,7 +3,7 @@ Version:	55920
 Release:	2
 Summary:	Additional font axes for LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.doc.r%{version}.tar.xz
