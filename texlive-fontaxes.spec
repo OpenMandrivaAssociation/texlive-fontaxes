@@ -1,50 +1,28 @@
-Name:		texlive-fontaxes
-Version:	55920
-Release:	2
-Summary:	Additional font axes for LaTeX
+%global tl_name fontaxes
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.0.2
+Release:	%{tl_revision}.1
+Summary:	Additional font selection axes for LaTeX
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fontaxes.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package adds several new font axes on top of LaTeX's New
-Font Selection Scheme. In particular, it splits the shape axis
-into a primary and a secondary shape axis, and it adds three
-new axes to deal with the different figure versions offered by
-many professional fonts.
+The package adds several new font axes on top of LaTeX's New Font
+Selection Scheme. In particular, it splits the shape axis into a primary
+and a secondary shape axis, and it adds three new axes to deal with the
+different figure versions offered by many professional fonts. This
+package has nowadays been deprecated in favour of the figureversions
+package.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/fontaxes/fontaxes.sty
-%doc %{_texmfdistdir}/doc/latex/fontaxes/README
-%doc %{_texmfdistdir}/doc/latex/fontaxes/fontaxes.pdf
-%doc %{_texmfdistdir}/doc/latex/fontaxes/test-fontaxes.tex
-#- source
-%doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.dtx
-%doc %{_texmfdistdir}/source/latex/fontaxes/fontaxes.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
